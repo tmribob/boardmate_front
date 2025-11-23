@@ -1,0 +1,16 @@
+.button {
+  text-decoration: none;
+  cursor: pointer;
+  transition: scale 0.25s ease;
+}
+
+.button:hover{
+  scale: 1.05;
+}
+
+.green {
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 0.5em 1.5em;
+}

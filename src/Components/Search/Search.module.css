@@ -1,0 +1,28 @@
+.searchArea {
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid var(--coffee);
+  background-color: var(--lightWhite);
+  padding: 0.5em;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.searchArea:focus-within, .searchArea:hover {
+  border: 2px solid var(--coffee);
+}
+
+.search {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.search::placeholder {
+  color: var(--grey);
+}
+
+.ioSearch {
+  scale: 1.25;
+  color: var(--coffee);
+}

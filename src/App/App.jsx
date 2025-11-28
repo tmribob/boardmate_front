@@ -5,20 +5,17 @@ import Header from "../Components/Header";
 import {
   HomePage, ProfilePage, GamePage, CatalogPage, LoginPage, RegisterPage
 } from "../Pages"
-import img from '../avatar.png'
-
-import './App.css'
 
 const App = () => {
-  const [profile, setProfile] = useState({avatar: img});
-  // const [profile, setProfile] = useState({avatar: undefined});
+  // const [profile, setProfile] = useState({avatar: "/avatar.png"});
+  const [profile, setProfile] = useState({avatar: undefined});
 
   const location = useLocation();
   const hideHeader = ['/login', '/register'].includes(location.pathname);
 
   const login = () => {
     //BACK
-    const newAvatar = img;
+    const newAvatar = "/avatar.png";
     setProfile({...profile, avatar: newAvatar})
   }
 
@@ -56,7 +53,6 @@ const App = () => {
         path={'/profile'}
         element={<ProfilePage />}
       />
-
     </Routes>
   </>);
 }

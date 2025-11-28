@@ -1,0 +1,6 @@
+.main {
+  display: flex;
+  padding: 3% 10%;
+  gap: 5%;
+  width: 80%;
+}

@@ -1,9 +1,9 @@
 import style from './Header.module.css';
-import Logo from "../Logo";
+import Logo from "./Logo";
 import {NavLink} from "react-router-dom";
-import Search from "../Search";
+import Search from "./Search";
 import Button from "../Button";
-import NavBar from "../NavBar";
+import NavBar from "./NavBar";
 
 const Header = ({avatar}) => {
   return (<div className={style.header}>

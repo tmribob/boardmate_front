@@ -2,6 +2,12 @@
   text-decoration: none;
   cursor: pointer;
   transition: scale 0.25s ease;
+  border-radius: 8px;
+  padding: 0.5em 1.5em;
+  border: 0 var(--white) solid;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
 }
 
 .button:hover{
@@ -11,6 +17,10 @@
 .green {
   background-color: var(--green);
   color: var(--white);
-  border-radius: 8px;
-  padding: 0.5em 1.5em;
+}
+.yellow {
+  background-color: var(--yellow);
+}
+.grey {
+  background-color: var(--coffee-alpha);
 }

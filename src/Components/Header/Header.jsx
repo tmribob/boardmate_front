@@ -22,8 +22,6 @@ const Header = ({avatar}) => {
       </NavLink> : <NavLink to="/login">
         <Button
           content="Войти"
-          theme="green"
-          title="Вход"
         />
       </NavLink>}
     </div>

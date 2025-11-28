@@ -6,4 +6,4 @@ import RegisterPage from "./RegisterPage";
 import ProfilePage from "./ProfilePage";
 
 
-export {HomePage, ProfilePage, GamePage, RegisterPage, LoginPage, CatalogPage}
+export {HomePage, ProfilePage, GamePage, RegisterPage, LoginPage, CatalogPage};

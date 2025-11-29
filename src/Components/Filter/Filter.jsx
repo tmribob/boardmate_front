@@ -4,7 +4,7 @@ import {useState} from "react";
 import CheckBoxArea from "./CheckBoxArea";
 import RangeInput from "./RangeInput";
 
-import StarList from "./StarList";
+import StarList from "../StarList";
 import genresList from "../../data/genresList";
 import difficultiesList from "../../data/difficultiesList";
 import Button from "../Button";

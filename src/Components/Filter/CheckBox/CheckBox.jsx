@@ -6,7 +6,6 @@ const CheckBox = ({name, label, onChange, checked,id}) => {
     className={style.checkBox}
   >
     <input
-      key={id}
       type="checkbox"
       name={name}
       id={name}

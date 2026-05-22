@@ -6,9 +6,14 @@ import {IoPeople} from "react-icons/io5";
 import {FaRegHeart} from "react-icons/fa";
 import difficultiesList from "../../data/difficultiesList";
 import genresList from "../../data/genresList";
+import {useNavigate} from "react-router-dom";
 
 const GameCard = ({game}) => {
-  console.log(game)
+  const navigate = useNavigate();
+  const goToGame =()=>{
+    navigate(`/game/${game.id}`);
+  };
+
   return (<div className={style.card}>
     <img
       src={game.imgSrc}
@@ -21,7 +26,7 @@ const GameCard = ({game}) => {
     <div className={style.character}>
       {genresList.filter((v) =>
         game.genres.includes(v.id)).map((v) =>
-        <p className={style.genreGame}>{v.label}</p>)}
+        <p className={style.genreGame} key={v.label}>{v.label}</p>)}
     </div>
     <div className={style.character}>
       <StarList rate={game.rate} />
@@ -31,7 +36,7 @@ const GameCard = ({game}) => {
       <FaBrain />
       {difficultiesList.filter((v) =>
         v.id === game.difficulty).map((v) =>
-        <p className={style.difficultyGame}>{v.label}</p>)}
+        <p className={style.difficultyGame} key={v.label}>{v.label}</p>)}
     </div>
     <div className={style.character}>
       <FaClock />
@@ -47,8 +52,9 @@ const GameCard = ({game}) => {
     </div>
     <div className={style.activityGame}>
       <Button
+        theme="green"
         content="Подробнее"
-        onClick={`/game/${game.id}`}
+        onClick={goToGame}
       />
       <FaRegHeart className={style.likeGame}/>
     </div>

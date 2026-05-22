@@ -1,6 +1,6 @@
-.searchArea {
+.area {
   display: flex;
-  border-radius: 8px;
+  border-radius: 0.5em;
   border: 1px solid var(--coffee);
   background-color: var(--lightWhite);
   padding: 0.5em;
@@ -8,22 +8,24 @@
   gap: 0.5em;
 }
 
-.searchArea:focus-within, .searchArea:hover {
+.area:focus-within, .area:hover {
   border: 2px solid var(--coffee);
 }
 
-.search {
+.input {
   background-color: transparent;
   border: none;
   outline: none;
   color: var(--black);
+  width: 100%;
+  height: 100%;
 }
 
-.search::placeholder {
+.input::placeholder {
   color: var(--grey);
 }
 
-.ioSearch {
+.icon {
   scale: 1.25;
   color: var(--coffee);
 }

@@ -4,7 +4,7 @@ const Button = ({
                   onClick,
                   content,
                   type = "button",
-                  theme = "green",
+                  theme = "transparent",
                   title = "",
                   width = "100%",
                   height = "2.2em",

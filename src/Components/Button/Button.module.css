@@ -24,3 +24,8 @@
 .grey {
   background-color: var(--coffee-20);
 }
+
+.transparent{
+  background-color: transparent;
+  color: var(--coffee);
+}

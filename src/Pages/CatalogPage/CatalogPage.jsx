@@ -1,65 +1,36 @@
 import style from './CatalogPage.module.css';
-import Filter from './../../Components/Filter'
+import Filter from '../../Components/Catalog/Filter'
 import {useState} from "react";
-import GamesHeader from "../../Components/GamesHeader";
-import GridGames from "../../Components/GridGames";
+import GamesHeader from "../../Components/Catalog/GamesHeader";
+import GridGames from "../../Components/Catalog/GridGames";
+import Pagination from "../../Components/Catalog/Pagination";
+
+import gamesStart from "./../../data/games"
 
 const CatalogPage = () => {
-  const [games, setGames] = useState([{
-    id: 0,
-    name: "Каркасон",
-    imgSrc: "./img.png",
-    genres: [1],
-    rate: 4.6,
-    difficulty: 1,
-    duration: {min: 30, max: 90},
-    numberPeople: {min: 2, max: 5},
-    followers: 12345
-  }, {
-    id: 1,
-    name: "Root",
-    imgSrc: "./img.png",
-    genres: [1],
-    rate: 4.6,
-    difficulty: 1,
-    duration: {min: 30, max: 60},
-    numberPeople: {min: 2, max: 4},
-    followers: 3232
-  }, {
-    id: 2,
-    name: "Gfddfd",
-    imgSrc: "./img.png",
-    genres: [1],
-    rate: 4.6,
-    difficulty: 1,
-    duration: {min: 30, max: 90},
-    numberPeople: {min: 2, max: 5},
-    followers: 12
-  }, {
-    id: 3,
-    name: "sdfsdfds",
-    imgSrc: "./img.png",
-    genres: [1],
-    rate: 4.6,
-    difficulty: 1,
-    duration: {min: 30, max: 90},
-    numberPeople: {min: 2, max: 5},
-    followers: 3232
-  }]);
-
-  const [sort, setSort] = useState(1)
+  const [sort, setSort] = useState("popularity")
   const onSortChange = (v) => {
     setSort(v);
   }
+  const [currentPage, setCurrentPage] = useState(1);
+  const maxPage = Math.ceil(gamesStart.length / 6);
   return (<main className={style.main}>
     <Filter />
     <div className={style.catalog}>
       <GamesHeader
-        gamesCount={games.length}
+        gamesCount={gamesStart.length}
         sort={sort}
         onSortChange={onSortChange}
       />
-      <GridGames games={games} />
+      <GridGames
+        games={gamesStart.filter((_, i) =>
+          Math.floor(i / 6) + 1 === currentPage)}
+      />
+      <Pagination
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        maxPage={maxPage}
+      />
     </div>
   </main>);
 };

@@ -32,6 +32,8 @@
 .nameGame {
   margin: 0;
   color: var(--black);
+  overflow: hidden;
+  height: 1em;
 }
 
 .activityGame {

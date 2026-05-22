@@ -6,7 +6,7 @@ const RangeInput = ({name, min, max, step, value, change, isTime = false}) => {
   const hours = Math.floor(value / 60) ? `${Math.floor(value / 60)} ч ` : "";
   const minutes = value % 60 ? `${value % 60} мин` : "";
   const currentValue = isTime ? `${hours}${minutes}` : `${value}`;
-  const procentProgressBar = (value - min) / (max - min)
+  const percentProgressBar = (value - min) / (max - min)
 
   return (<div className={style.rangeDiv}>
     <input
@@ -21,7 +21,7 @@ const RangeInput = ({name, min, max, step, value, change, isTime = false}) => {
     />
     <div
       className={style.progressBar}
-      style={{width: `calc(${procentProgressBar * 100}% - ${Math.floor(procentProgressBar * 24)}px)`}}
+      style={{width: `calc(${percentProgressBar * 100}% - ${Math.floor(percentProgressBar * 24)}px)`}}
     ></div>
     <div className={style.description}>
       <p className={style.min}>{newMin}</p>

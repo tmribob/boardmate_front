@@ -1,5 +1,5 @@
 import style from './GridGames.module.css';
-import GameCard from "../GameCard";
+import GameCard from "../../GameCard";
 
 const GridGames = ({games}) => {
   return (<div className={style.gridGames}>

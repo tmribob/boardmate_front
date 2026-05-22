@@ -5,7 +5,6 @@ const GamesHeader = ({gamesCount, sort, onSortChange}) => {
     count = count % 100;
     const n = count % 10;
 
-    if (count > 10 && count < 20) return 'игр';
     if (n > 1 && n < 5) return 'игры';
     if (n === 1) return 'игра';
     return 'игр';
